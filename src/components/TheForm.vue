@@ -92,6 +92,9 @@
         <label for="how-other">Other</label>
       </div>
       <div class="form-control">
+        <rating-control></rating-control>
+      </div>
+      <div class="form-control">
         <input
           id="confirm-terms"
           name="confirm"
@@ -108,7 +111,12 @@
 </template>
 
 <script>
+import RatingControl from "./RatingControl";
+
 export default {
+  components: {
+    RatingControl
+  },
   data() {
     return {
       userName: "",
