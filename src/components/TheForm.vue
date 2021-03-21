@@ -92,7 +92,7 @@
         <label for="how-other">Other</label>
       </div>
       <div class="form-control">
-        <rating-control></rating-control>
+        <rating-control v-model="rating"></rating-control>
       </div>
       <div class="form-control">
         <input
@@ -124,6 +124,7 @@ export default {
       referrer: "google",
       interest: [],
       how: null,
+      rating: null,
       confirm: false,
       userNameIsValidity: "pending"
     };
@@ -135,12 +136,14 @@ export default {
       console.log("referrer: ", this.referrer);
       console.log("interest: ", this.interest);
       console.log("how: ", this.how);
+      console.log("rating: ", this.rating);
       console.log("confirm: ", this.confirm);
       this.userName = "";
       this.userAge = null;
       this.referrer = "google";
       this.interest = [];
       this.how = null;
+      this.rating = null;
       this.confirm = false;
     },
     validateUserName() {
